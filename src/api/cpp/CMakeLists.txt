@@ -102,7 +102,7 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
     # executable_path or loader_path.
     set_target_properties(gmxapi PROPERTIES INSTALL_NAME_DIR "@rpath")
 endif()
-
+ 
 set_target_properties(gmxapi PROPERTIES
 		      # REMOVE ESSA LINHA! Se isole e lave as mãos!
                       SOVERSION ${GMXAPI_MAJOR}
