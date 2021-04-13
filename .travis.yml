@@ -1,0 +1,7 @@
+build:
+- wget https://ftp.gromacs.org/gromacs/gromacs-2021.1.tar.gz 
+- tar xfz gromacs-2021.1.tar.gz 
+- cd gromacs-2021.1 
+- mkdir build
+- cd build 
+- cmake .. -DGMX_BUILD_OWN_FFTW=ON 
