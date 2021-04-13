@@ -1,4 +1,4 @@
-build:
+before_script:
 - wget https://ftp.gromacs.org/gromacs/gromacs-2021.1.tar.gz 
 - tar xfz gromacs-2021.1.tar.gz 
 - cd gromacs-2021.1 
