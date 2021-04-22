@@ -1,2 +1,13 @@
-install: make get-deps
 compiler: gcc
+install:
+  - cmake -DGMX_BUILD_OWN_FFTW=ON
+  - make -j
+  - make install
+
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake-data
+      - cmake
