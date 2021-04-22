@@ -1,0 +1,16 @@
+compiler: gcc
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+
+install:
+- mkdir build 
+- cd build 
+- cmake .. -DGMX_BUILD_OWN_FFTW=ON
+
+script:  
+- make  
+- sudo make install 
