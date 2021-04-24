@@ -21,6 +21,7 @@ source <(curl -s "https://raw.githubusercontent.com/delucca/shell-functions/1.0.
 function main {
   welcome
   log_experiment_settings
+  compile
 }
 
 # Log experiment settings
@@ -66,6 +67,15 @@ function log_compile_flags {
   for flag in $COMPILE_FLAGS; do
     echo ">    ${flag}"
   done
+}
+
+# Compile
+# -------------------------------------------------------------------------------------------------
+
+function compile {
+  log_title "COMPILATION"
+
+  $SOURCE_DIR/scripts/build.sh
 }
 
 # Execute

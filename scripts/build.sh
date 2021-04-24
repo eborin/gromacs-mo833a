@@ -3,40 +3,39 @@
 # Global variables
 # -------------------------------------------------------------------------------------------------
 
-GROMACS_VERSION="${2:-2020.1}"
-TMP_DIR="${3:-/tmp/gromacs}"
+SCRIPTS_PATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
+SOURCE_DIR=$(dirname ${SCRIPTS_PATH})
+COMPILE_FLAGS="${@:--DGMX_BUILD_OWN_FFTW=ON}"
+BUILD_DIR="${SOURCE_DIR}/build"
 
 # Entrypoint
 # -------------------------------------------------------------------------------------------------
 
 function main {
-  fetch_gromacs
-  build_gromacs
+  echo "Building GROMACS"
+
+  compile_gromacs
 }
 
 
 # Fetch GROMACS
 # -------------------------------------------------------------------------------------------------
 
-function fetch_gromacs {
-  echo "Fetching GROMACS"
+function compile_gromacs {
+  echo "Compiling from: ${SOURCE_DIR}"
 
-  mkdir -p $TMP_DIR
-  cd $TMP_DIR
-  wget ftp://ftp.gromacs.org/pub/gromacs/gromacs-${GROMACS_VERSION}.tar.gz 
-  tar xfz "gromacs-${GROMACS_VERSION}.tar.gz"
+  ensure_required_dirs
+  build_gromacs
 }
 
-# Build GROMACS
-# -------------------------------------------------------------------------------------------------
+function ensure_required_dirs {
+  mkdir -p $BUILD_DIR
+}
 
 function build_gromacs {
-  echo "Building GROCAMS"
-
-  cd "${TMP_DIR}/gromacs-${GROMACS_VERSION}"
-  mkdir build && cd build
-  cmake .. -DGMX_BUILD_OWN_FFTW=ON
-  make -j6
+  cd $BUILD_DIR
+  cmake .. $COMPILE_FLAGS
+  make -j
   make install
 }
 
