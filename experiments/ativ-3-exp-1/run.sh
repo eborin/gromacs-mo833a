@@ -30,8 +30,8 @@ function main {
   create_trial_dirs
 
   welcome
-  # log_experiment_settings
-  # compile
+  log_experiment_settings
+  compile
   run_trial
   summary
 }
@@ -65,6 +65,8 @@ function validate_expect_dependency {
 # -------------------------------------------------------------------------------------------------
 
 function create_trial_dirs {
+  mkdir -p $EXPERIMENT_PATH/trials
+
   update_trial_number
   update_trial_path
 
@@ -83,8 +85,6 @@ function update_trial_path {
 }
 
 function create_trial_sample_dirs {
-  mkdir -p $EXPERIMENT_PATH/trials
-
   for i in $(seq 1 $TRIAL_SAMPLES_AMOUNT); do
     mkdir "${TRIAL_PATH}/sample-${i}"
   done
