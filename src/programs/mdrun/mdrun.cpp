@@ -50,7 +50,8 @@
  *
  * \ingroup module_mdrun
  */
-#include "<sys/time.h>"
+#include <stdio.h>
+#include <sys/time.h>
 #include "gmxpre.h"
 
 #include "config.h"
@@ -76,7 +77,9 @@ namespace gmx
 
 double get_time_in_seconds() {
     struct timeval tp;
-    gettimeofday(&tp, &)
+    struct timezone tz;
+
+    gettimeofday(&tp, &tz);
     return ((double) tp.tv_sec + (double) tp.tv_usec * 1.e-6);
 }
 
@@ -278,8 +281,8 @@ int gmx_mdrun(int argc, char* argv[])
     int result = runner.mdrunner();
     double time_after = get_time_in_seconds();
 
-    double elapsed = time_after - time_before
-    printf("[MO833]: runner.mdrunner() exec. time: %f", elapsed)
+    double elapsed = time_after - time_before;
+    printf("[MO833]: runner.mdrunner() exec. time: %f", elapsed);
 
     return result;
 }
