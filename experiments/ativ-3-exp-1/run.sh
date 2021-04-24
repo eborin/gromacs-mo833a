@@ -39,16 +39,16 @@ function welcome {
 function log_experiment_settings {
   log_title "EXPERIMENT SETTINGS"
 
+  log_hardware_details
   log_env_variables
   log_compile_flags
   log_setting "Git HEAD revision" $(git rev-parse HEAD)
 }
 
-function log_setting {
-  label=$1
-  setting=$2
+function log_hardware_details {
+  log_setting "Hardware details"
 
-  echo "> ${TEXT_BOLD}${label}:${TEXT_RESET} ${setting}"
+  inxi -Fxz 2> /dev/null
 }
 
 function log_env_variables {
@@ -67,6 +67,13 @@ function log_compile_flags {
   for flag in $COMPILE_FLAGS; do
     echo ">    ${flag}"
   done
+}
+
+function log_setting {
+  label=$1
+  setting=$2
+
+  echo "> ${TEXT_BOLD}${label}:${TEXT_RESET} ${setting}"
 }
 
 # Compile
