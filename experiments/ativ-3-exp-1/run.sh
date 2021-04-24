@@ -215,7 +215,7 @@ function get_sample_result {
   result=$(cat $log_file | tail -n 1 | cut -d' ' -f 5)
   SAMPLE_EXECUTION_TIMES="${SAMPLE_EXECUTION_TIMES} ${sample_number}:${result}"
 
-  echo $SAMPLE_EXECUTION_TIMES
+  log_sample_message $sample_number "Finished executing sample. The execution time result was ${result} seconds"
 }
 
 function run_gmx_interactive_command {
