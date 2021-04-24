@@ -1,0 +1,18 @@
+FROM alpine:3.13.5
+
+WORKDIR /root
+
+# Install build dependencies
+RUN apk update && \
+  apk upgrade && \
+  apk --update add \
+    gcc \
+    g++ \
+    build-base \
+    cmake \
+    libstdc++
+
+# Copy build script
+COPY ./scripts/build.sh .
+
+ENTRYPOINT [ "/bin/sh", "build.sh" ]
