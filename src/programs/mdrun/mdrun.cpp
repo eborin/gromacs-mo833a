@@ -50,6 +50,7 @@
  *
  * \ingroup module_mdrun
  */
+#include "<sys/time.h>"
 #include "gmxpre.h"
 
 #include "config.h"
@@ -72,6 +73,12 @@
 
 namespace gmx
 {
+
+double get_time_in_seconds() {
+    struct timeval tp;
+    gettimeofday(&tp, &)
+    return ((double) tp.tv_sec + (double) tp.tv_usec * 1.e-6);
+}
 
 //! Implements C-style main function for mdrun
 int gmx_mdrun(int argc, char* argv[])
@@ -267,7 +274,14 @@ int gmx_mdrun(int argc, char* argv[])
 
     auto runner = builder.build();
 
-    return runner.mdrunner();
+    double time_before = get_time_in_seconds();
+    int result = runner.mdrunner();
+    double time_after = get_time_in_seconds();
+
+    double elapsed = time_after - time_before
+    printf("[MO833]: runner.mdrunner() exec. time: %f", elapsed)
+
+    return result;
 }
 
 } // namespace gmx
