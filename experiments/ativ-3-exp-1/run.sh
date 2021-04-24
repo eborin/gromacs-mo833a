@@ -9,6 +9,9 @@ COMPILE_FLAGS="${@:--DGMX_BUILD_OWN_FFTW=ON}"
 TEXT_BOLD=$(tput bold)
 TEXT_CYAN=$(tput setaf 6)
 TEXT_RESET=$(tput sgr0)
+export GMX_BIN="${SOURCE_DIR}/build/bin/gmx"
+SAMPLE_NUMBER=1
+SAMPLE_PATH="${EXPERIMENT_PATH}/samples/sample-${SAMPLE_NUMBER}"
 
 # Imports
 # -------------------------------------------------------------------------------------------------
@@ -20,8 +23,47 @@ source <(curl -s "https://raw.githubusercontent.com/delucca/shell-functions/1.0.
 
 function main {
   welcome
-  log_experiment_settings
-  compile
+  validate_requirements
+  create_sample_dirs
+
+  # log_experiment_settings
+  # compile
+  run_experiment
+}
+
+# Validate requirements
+# -------------------------------------------------------------------------------------------------
+
+function validate_requirements {
+  validate_expect_dependency
+}
+
+function validate_bash_dependency {
+  major_version="$(expect -v | head -1 | cut -d ' ' -f 3 | cut -d '.' -f 1)"
+  min_major_version="5"
+
+  if [ "${major_version}" -lt "${min_major_version}" ]; then
+    throw_error "Your expect major version must be ${min_major_version} or greater"
+  fi
+}
+
+# Create sample dirs
+# -------------------------------------------------------------------------------------------------
+
+function create_sample_dirs {
+  update_sample_number
+  update_sample_path
+}
+
+function update_sample_number {
+  while [[ -d "${EXPERIMENT_PATH}/samples/sample-${SAMPLE_NUMBER}" ]] ; do
+    SAMPLE_NUMBER=$(($SAMPLE_NUMBER+1))
+  done
+}
+
+function update_sample_path {
+  SAMPLE_PATH="${EXPERIMENT_PATH}/samples/sample-${SAMPLE_NUMBER}"
+  mkdir $SAMPLE_PATH
 }
 
 # Log experiment settings
@@ -83,6 +125,44 @@ function compile {
   log_title "COMPILATION"
 
   $SOURCE_DIR/scripts/build.sh
+}
+
+# Run experiment
+# -------------------------------------------------------------------------------------------------
+
+function run_experiment {
+  log_title "RUN EXPERIMENT"
+
+  parse_simulation_data
+}
+
+function parse_simulation_data {
+  export INPUT_DIR=$EXPERIMENT_PATH/input
+  data_dir=$SAMPLE_PATH/data
+  mkdir $data_dir
+
+  pushd $data_dir
+
+  run_gmx_interactive_command $EXPERIMENT_PATH/interactive-commands/pdb2gmx.expect
+  run_gmx_command editconf -f 6LVN_processed.gro -o 6LVN_newbox.gro -c -d 1.0 -bt cubic
+  run_gmx_command solvate -cp 6LVN_newbox.gro -cs spc216.gro -o 6LVN_solv.gro -p topol.top
+  run_gmx_command grompp -f $INPUT_DIR/ions.mdp -c 6LVN_solv.gro -p topol.top -o ions.tpr
+  run_gmx_interactive_command $EXPERIMENT_PATH/interactive-commands/genion.expect
+  run_gmx_command grompp -f $INPUT_DIR/ions.mdp -c 6LVN_solv_ions.gro -p topol.top -o em.tpr
+
+  popd
+}
+
+function run_gmx_interactive_command {
+  echo
+  echo "Running interactive GMX command: ${TEXT_BOLD}${TEXT_CYAN}$@${TEXT_RESET}"
+  expect $@
+}
+
+function run_gmx_command {
+  echo
+  echo "Running GMX command: ${TEXT_BOLD}${TEXT_CYAN}$@${TEXT_RESET}"
+  $GMX_BIN $@
 }
 
 # Execute
