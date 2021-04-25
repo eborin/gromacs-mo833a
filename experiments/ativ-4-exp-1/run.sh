@@ -8,13 +8,10 @@ EXPERIMENT_DIR_PATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
 EXPERIMENTS_DIR_PATH=$(dirname $EXPERIMENT_DIR_PATH)
 SOURCE_DIR_PATH=$(dirname $EXPERIMENTS_DIR_PATH)
 INPUT_DIR_PATH=$EXPERIMENT_DIR_PATH/input
-TRIAL_NUMBER=1
-TRIAL_PATH="${EXPERIMENT_DIR_PATH}/trials/trial-${TRIAL_NUMBER}"
-TRIAL_SAMPLES_AMOUNT=1
+GIT_HEAD_REVISION=$(git rev-parse HEAD)
 TEXT_BOLD=$(tput bold)
 TEXT_CYAN=$(tput setaf 6)
 TEXT_RESET=$(tput sgr0)
-GIT_HEAD_REVISION=$(git rev-parse HEAD)
 
 # Imports
 # -------------------------------------------------------------------------------------------------
@@ -25,32 +22,10 @@ source <(curl -s "https://raw.githubusercontent.com/delucca/shell-functions/1.0.
 # -------------------------------------------------------------------------------------------------
 
 function main {
-  do_setup
   log_welcome
   log_experiment_settings
-  run_trial
-  log_summary
-}
-
-# Do setup
-# -------------------------------------------------------------------------------------------------
-
-function do_setup {
-  mkdir -p $EXPERIMENT_DIR_PATH/trials
-
-  update_trial_number
-  update_trial_path
-}
-
-function update_trial_number {
-  while [[ -d "${EXPERIMENT_DIR_PATH}/trials/trial-${TRIAL_NUMBER}" ]] ; do
-    TRIAL_NUMBER=$(($TRIAL_NUMBER+1))
-  done
-}
-
-function update_trial_path {
-  TRIAL_PATH="${EXPERIMENT_DIR_PATH}/trials/trial-${TRIAL_NUMBER}"
-  mkdir $TRIAL_PATH
+  setup_trial
+  log_next_steps
 }
 
 # Welcome
@@ -59,7 +34,6 @@ function update_trial_path {
 function log_welcome {
   echo "${TEXT_BOLD}${TEXT_CYAN}Welcome${TEXT_RESET}"
   echo "You are running ${TEXT_BOLD}${TEXT_CYAN}GROMACS ativ-4-exp-1${TEXT_RESET} experiment"
-  echo "This is the ${TEXT_BOLD}${TEXT_CYAN}trial number ${TRIAL_NUMBER}${TEXT_RESET}, which uses ${TRIAL_SAMPLES_AMOUNT} samples"
 }
 
 # Log experiment settings
@@ -73,7 +47,6 @@ function log_experiment_settings {
   log_compile_flags
   log_setting "Git HEAD revision" $GIT_HEAD_REVISION
   log_setting "Trial number" $TRIAL_NUMBER
-  log_setting "Amount of samples" $TRIAL_SAMPLES_AMOUNT
 }
 
 function log_hardware_details {
@@ -107,69 +80,49 @@ function log_setting {
   echo "> ${TEXT_BOLD}${label}:${TEXT_RESET} ${setting}"
 }
 
-# Run experiment
+# Setup trial
 # -------------------------------------------------------------------------------------------------
 
-function run_trial {
-  log_title "TRIAL"
+function setup_trial {
+  log_title "SETUP TRIAL"
 
-  prepare_trial
-
-  for sample_number in $(seq 1 $TRIAL_SAMPLES_AMOUNT); do
-    run_sample $sample_number
-  done;
-}
-
-function prepare_trial {
-  echo
-  echo "${TEXT_BOLD}${TEXT_CYAN}> Preparing trial${TEXT_RESET}"
-
-  echo "Building containers"
+  echo "${TEXT_BOLD}${TEXT_CYAN}Building GROMACS containers${TEXT_RESET}"
   $EXPERIMENTS_DIR_PATH/scripts/refresh-containers.sh
+
+  echo "${TEXT_BOLD}${TEXT_CYAN}Building trial container${TEXT_RESET}"
   docker build -t mo833a/gromacs:ativ-4-exp-1 -f $EXPERIMENT_DIR_PATH/Dockerfile $EXPERIMENT_DIR_PATH
-}
-
-function run_sample {
-  sample_number=$1
-  sample_log_file_path=$TRIAL_PATH/sample-${sample_number}.log
-  sample_perf_file_path=$TRIAL_PATH/sample-${sample_number}.perf
-  output_dir=$TRIAL_PATH/output
-
-  echo
-  echo "${TEXT_BOLD}${TEXT_CYAN}> Running sample ${sample_number}${TEXT_RESET}"
-
-  mkdir -p $output_dir
-
-  log_sample_message $sample_number "Running simulation profiling. Logs are being stored at ${sample_log_file_path}. Perf data is being stored at ${sample_perf_file_path}"
-  docker run \
-    --privileged \
-    --mount type=bind,source=$output_dir,target=/root/experiment/output \
-    -v /:/host \
-    mo833a/gromacs:ativ-4-exp-1 \
-    &> $sample_log_file_path
-
-  mv $output_dir/perf.data $sample_perf_file_path
-  rm -rf $output_dir
-}
-
-function log_sample_message {
-  sample_number=$1
-  message=$2
-
-  echo "${TEXT_BOLD}${TEXT_CYAN}> Sample ${sample_number}:${TEXT_RESET} $message"
 }
 
 # Log summary
 # -------------------------------------------------------------------------------------------------
 
-function log_summary {
-  log_title "EXPERIMENT SUMMARY"
+function log_next_steps {
+  log_title "NEXT STEPS"
 
-  echo "Finished experiment"
-  echo "You can check the perf report with the following command:"
+  echo "${TEXT_BOLD}Finished experiment setup${TEXT_RESET}"
+  echo "To execute the Code Profiling, you can follow these steps:"
 
+  echo
+  echo "${TEXT_BOLD}Step 1:${TEXT_RESET} Open the container with the following command:"
   cat <<EOF
-  ${TEXT_BOLD}${TEXT_CYAN}perf report -i sample-$.perf${TEXT_RESET}
+  ${TEXT_BOLD}${TEXT_CYAN}docker run \\
+    --privileged \\
+    -v /:/host \\
+    -it \\
+    mo833a/gromacs:ativ-4-exp-1 \\
+    bin/sh${TEXT_RESET}
+EOF
+
+  echo
+  echo "${TEXT_BOLD}Step 2:${TEXT_RESET} Run the perf command:"
+  cat <<EOF
+  ${TEXT_BOLD}${TEXT_CYAN}perf record gmx mdrun -v -deffnm em${TEXT_RESET}
+EOF
+
+  echo
+  echo "${TEXT_BOLD}Step 3:${TEXT_RESET} Evaluate the perf result:"
+  cat <<EOF
+  ${TEXT_BOLD}${TEXT_CYAN}perf report${TEXT_RESET}
 EOF
 }
 

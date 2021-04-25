@@ -12,18 +12,24 @@ BUILD_DIR_PATH="${SOURCE_DIR_PATH}/build"
 # -------------------------------------------------------------------------------------------------
 
 function main {
-  echo "Compiling GROMACS"
-
+  log_welcome
   compile_gromacs
 
   exit 0
 }
 
-# Fetch GROMACS
+# Log welcome
+# -------------------------------------------------------------------------------------------------
+
+function log_welcome {
+  echo "> Compiling GROMACS..."
+}
+
+# Compile GROMACS
 # -------------------------------------------------------------------------------------------------
 
 function compile_gromacs {
-  echo "Compiling from: ${SOURCE_DIR}"
+  echo ">     Compiling from: ${SOURCE_DIR}"
 
   ensure_required_dirs
   build_gromacs
