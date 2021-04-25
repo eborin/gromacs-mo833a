@@ -35,7 +35,7 @@ function ensure_required_dirs {
 function build_gromacs {
   cd $BUILD_DIR
   cmake .. $COMPILE_FLAGS
-  make -j
+  make -j6
   make install
 }
 

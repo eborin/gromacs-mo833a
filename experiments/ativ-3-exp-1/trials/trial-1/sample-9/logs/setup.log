@@ -1,7 +1,7 @@
 
 Running interactive GMX command: [1m[36m/workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/interactive-commands/pdb2gmx.expect(B[m
 spawn /workspaces/gromacs-mo833a/build/bin/gmx pdb2gmx -f /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/6LVN.pdb -o 6LVN_processed.gro -water spce
-      :-) GROMACS - gmx pdb2gmx, 2020.2-dev-20210424-a932219f6-unknown (-:
+   :-) GROMACS - gmx pdb2gmx, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
 
                             GROMACS is written by:
      Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
@@ -29,7 +29,7 @@ under the terms of the GNU Lesser General Public License
 as published by the Free Software Foundation; either version 2.1
 of the License, or (at your option) any later version.
 
-GROMACS:      gmx pdb2gmx, version 2020.2-dev-20210424-a932219f6-unknown
+GROMACS:      gmx pdb2gmx, version 2020.2-dev-20210425-3aec20890-dirty-unknown
 Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
 Data prefix:  /workspaces/gromacs-mo833a (source tree)
 Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-1/sample-9/data
@@ -49,12 +49,12 @@ From '/workspaces/gromacs-mo833a/share/top':
  8: CHARMM27 all-atom force field (CHARM22 plus CMAP for proteins)
  9: GROMOS96 43a1 force field
 10: GROMOS96 43a2 force field (improved alkane dihedrals)
-15
 11: GROMOS96 45a3 force field (Schuler JCC 2001 22 1205)
 12: GROMOS96 53a5 force field (JCC 2004 vol 25 pag 1656)
 13: GROMOS96 53a6 force field (JCC 2004 vol 25 pag 1656)
 14: GROMOS96 54a7 force field (Eur. Biophys. J. (2011), 40,, 843-856, DOI: 10.1007/s00249-011-0700-9)
 15: OPLS-AA/L all-atom force field (2001 aminoacid dihedrals)
+15
 
 Using the Oplsaa force field in directory oplsaa.ff
 
@@ -254,11 +254,11 @@ You have successfully generated a topology from: /workspaces/gromacs-mo833a/expe
 The Oplsaa force field and the spce water model are used.
 		--------- ETON ESAELP ------------
 
-GROMACS reminds you: "I Got a Forty Dollar Bill" (F. Zappa)
+GROMACS reminds you: "They Paint Their Faces So Differently From Ours" (Gogol Bordello)
 
 
 Running GMX command: [1m[36meditconf -f 6LVN_processed.gro -o 6LVN_newbox.gro -c -d 1.0 -bt cubic(B[m
-     :-) GROMACS - gmx editconf, 2020.2-dev-20210424-a932219f6-unknown (-:
+  :-) GROMACS - gmx editconf, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
 
                             GROMACS is written by:
      Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
@@ -286,7 +286,7 @@ under the terms of the GNU Lesser General Public License
 as published by the Free Software Foundation; either version 2.1
 of the License, or (at your option) any later version.
 
-GROMACS:      gmx editconf, version 2020.2-dev-20210424-a932219f6-unknown
+GROMACS:      gmx editconf, version 2020.2-dev-20210425-3aec20890-dirty-unknown
 Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
 Data prefix:  /workspaces/gromacs-mo833a (source tree)
 Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-1/sample-9/data
@@ -294,7 +294,7 @@ Command line:
   gmx editconf -f 6LVN_processed.gro -o 6LVN_newbox.gro -c -d 1.0 -bt cubic
 
 
-GROMACS reminds you: "Any one who considers arithmetical methods of producing random digits is, of course, in a state of sin." (John von Neumann)
+GROMACS reminds you: "I Could Take You Home and Abuse You" (Magnapop)
 
 Note that major changes are planned in future for editconf, to improve usability and utility.
 Read 2218 atoms
@@ -313,7 +313,7 @@ new box angles  :  90.00  90.00  90.00 (degrees)
 new box volume  : 529.02               (nm^3)
 
 Running GMX command: [1m[36msolvate -cp 6LVN_newbox.gro -cs spc216.gro -o 6LVN_solv.gro -p topol.top(B[m
-      :-) GROMACS - gmx solvate, 2020.2-dev-20210424-a932219f6-unknown (-:
+   :-) GROMACS - gmx solvate, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
 
                             GROMACS is written by:
      Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
@@ -341,7 +341,7 @@ under the terms of the GNU Lesser General Public License
 as published by the Free Software Foundation; either version 2.1
 of the License, or (at your option) any later version.
 
-GROMACS:      gmx solvate, version 2020.2-dev-20210424-a932219f6-unknown
+GROMACS:      gmx solvate, version 2020.2-dev-20210425-3aec20890-dirty-unknown
 Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
 Data prefix:  /workspaces/gromacs-mo833a (source tree)
 Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-1/sample-9/data
@@ -390,12 +390,12 @@ Processing topology
 
 Back Off! I just backed up topol.top to ./#topol.top.1#
 
-GROMACS reminds you: "Do You Have Sex Maniacs or Schizophrenics or Astrophysicists in Your Family?" (Gogol Bordello)
+GROMACS reminds you: "Good judgement is the result of experience; experience is the result of bad judgement." (Mark Twain)
 
 Adding line for 16638 solvent molecules with resname (SOL) to topology file (topol.top)
 
 Running GMX command: [1m[36mgrompp -f /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp -c 6LVN_solv.gro -p topol.top -o ions.tpr(B[m
-      :-) GROMACS - gmx grompp, 2020.2-dev-20210424-a932219f6-unknown (-:
+   :-) GROMACS - gmx grompp, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
 
                             GROMACS is written by:
      Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
@@ -423,7 +423,7 @@ under the terms of the GNU Lesser General Public License
 as published by the Free Software Foundation; either version 2.1
 of the License, or (at your option) any later version.
 
-GROMACS:      gmx grompp, version 2020.2-dev-20210424-a932219f6-unknown
+GROMACS:      gmx grompp, version 2020.2-dev-20210425-3aec20890-dirty-unknown
 Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
 Data prefix:  /workspaces/gromacs-mo833a (source tree)
 Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-1/sample-9/data
@@ -437,7 +437,7 @@ NOTE 1 [file /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp]
   that with the Verlet scheme, nstlist has no effect on the accuracy of
   your simulation.
 
-Setting the LD random seed to -2128968261
+Setting the LD random seed to 437327670
 Generated 330891 of the 330891 non-bonded parameter combinations
 Generating 1-4 interactions: fudge = 0.5
 Generated 330891 of the 330891 1-4 parameter combinations
@@ -469,7 +469,7 @@ NOTE 3 [file /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp]
 
 There were 3 notes
 
-GROMACS reminds you: "Good judgement is the result of experience; experience is the result of bad judgement." (Mark Twain)
+GROMACS reminds you: "Between equal rights, force decides." (Karl Marx)
 
 Analysing residue names:
 There are:   136    Protein residues
@@ -479,7 +479,7 @@ This run will generate roughly 4 Mb of data
 
 Running interactive GMX command: [1m[36m/workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/interactive-commands/genion.expect(B[m
 spawn /workspaces/gromacs-mo833a/build/bin/gmx genion -s ions.tpr -o 6LVN_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
-      :-) GROMACS - gmx genion, 2020.2-dev-20210424-a932219f6-unknown (-:
+   :-) GROMACS - gmx genion, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
 
                             GROMACS is written by:
      Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
@@ -507,15 +507,15 @@ under the terms of the GNU Lesser General Public License
 as published by the Free Software Foundation; either version 2.1
 of the License, or (at your option) any later version.
 
-GROMACS:      gmx genion, version 2020.2-dev-20210424-a932219f6-unknown
+GROMACS:      gmx genion, version 2020.2-dev-20210425-3aec20890-dirty-unknown
 Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
 Data prefix:  /workspaces/gromacs-mo833a (source tree)
 Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-1/sample-9/data
 Command line:
   gmx genion -s ions.tpr -o 6LVN_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
 
-Reading file ions.tpr, VERSION 2020.2-dev-20210424-a932219f6-unknown (single precision)
-Reading file ions.tpr, VERSION 2020.2-dev-20210424-a932219f6-unknown (single precision)
+Reading file ions.tpr, VERSION 2020.2-dev-20210425-3aec20890-dirty-unknown (single precision)
+Reading file ions.tpr, VERSION 2020.2-dev-20210425-3aec20890-dirty-unknown (single precision)
 Will try to add 12 NA ions and 0 CL ions.
 Select a continuous group of solvent molecules
 13
@@ -541,26 +541,26 @@ Processing topology
 Replacing 12 solute molecules in topology file (topol.top)  by 12 NA and 0 CL ions.
 
 Back Off! I just backed up topol.top to ./#topol.top.2#
-Using random seed -1744074838.
-Replacing solvent molecule 8622 (atom 28018) with NA
-Replacing solvent molecule 1984 (atom 8104) with NA
-Replacing solvent molecule 10525 (atom 33727) with NA
-Replacing solvent molecule 11091 (atom 35425) with NA
-Replacing solvent molecule 3986 (atom 14110) with NA
-Replacing solvent molecule 6955 (atom 23017) with NA
-Replacing solvent molecule 3024 (atom 11224) with NA
-Replacing solvent molecule 4760 (atom 16432) with NA
-Replacing solvent molecule 1970 (atom 8062) with NA
-Replacing solvent molecule 15573 (atom 48871) with NA
-Replacing solvent molecule 14134 (atom 44554) with NA
-Replacing solvent molecule 14408 (atom 45376) with NA
+Using random seed -53354898.
+Replacing solvent molecule 430 (atom 3442) with NA
+Replacing solvent molecule 6412 (atom 21388) with NA
+Replacing solvent molecule 7869 (atom 25759) with NA
+Replacing solvent molecule 2237 (atom 8863) with NA
+Replacing solvent molecule 8498 (atom 27646) with NA
+Replacing solvent molecule 1443 (atom 6481) with NA
+Replacing solvent molecule 15918 (atom 49906) with NA
+Replacing solvent molecule 15532 (atom 48748) with NA
+Replacing solvent molecule 10194 (atom 32734) with NA
+Replacing solvent molecule 2326 (atom 9130) with NA
+Replacing solvent molecule 16039 (atom 50269) with NA
+Replacing solvent molecule 1772 (atom 7468) with NA
 
 
-GROMACS reminds you: "No, no, you're not thinking, you're just being logical." (Niels Bohr)
+GROMACS reminds you: "I'm a Jerk" (F. Black)
 
 
 Running GMX command: [1m[36mgrompp -f /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp -c 6LVN_solv_ions.gro -p topol.top -o em.tpr(B[m
-      :-) GROMACS - gmx grompp, 2020.2-dev-20210424-a932219f6-unknown (-:
+   :-) GROMACS - gmx grompp, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
 
                             GROMACS is written by:
      Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
@@ -588,7 +588,7 @@ under the terms of the GNU Lesser General Public License
 as published by the Free Software Foundation; either version 2.1
 of the License, or (at your option) any later version.
 
-GROMACS:      gmx grompp, version 2020.2-dev-20210424-a932219f6-unknown
+GROMACS:      gmx grompp, version 2020.2-dev-20210425-3aec20890-dirty-unknown
 Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
 Data prefix:  /workspaces/gromacs-mo833a (source tree)
 Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-1/sample-9/data
@@ -602,7 +602,7 @@ NOTE 1 [file /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp]
   that with the Verlet scheme, nstlist has no effect on the accuracy of
   your simulation.
 
-Setting the LD random seed to 1246864723
+Setting the LD random seed to 1886329277
 Generated 330891 of the 330891 non-bonded parameter combinations
 Generating 1-4 interactions: fudge = 0.5
 Generated 330891 of the 330891 1-4 parameter combinations
@@ -626,7 +626,7 @@ NOTE 2 [file /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp]
 
 There were 2 notes
 
-GROMACS reminds you: "You Fill Your Space So Sweet" (F. Apple)
+GROMACS reminds you: "Why Do *You* Use Constraints ?" (H.J.C. Berendsen)
 
 Analysing residue names:
 There are:   136    Protein residues
