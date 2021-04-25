@@ -141,7 +141,7 @@ function log_setting {
 function compile {
   log_title "COMPILATION"
 
-  $SOURCE_DIR/scripts/build.sh
+  $SOURCE_DIR/scripts/build.sh $COMPILE_FLAGS
 }
 
 # Run experiment
