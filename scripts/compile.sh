@@ -15,6 +15,8 @@ function main {
   echo "Compiling GROMACS"
 
   compile_gromacs
+
+  exit 0
 }
 
 # Fetch GROMACS
@@ -37,15 +39,6 @@ function build_gromacs {
   cmake $SOURCE_DIR_PATH $COMPILE_FLAGS
   make -j6
   make install
-
-  echo "--"
-  ls build
-  echo "--"
-  ls build/gromacs
-  echo "--"
-  ls /usr/local
-  echo "--"
-  ls /usr/local/gromacs
 
   popd &> /dev/null
 }

@@ -7,9 +7,9 @@ COMPILE_FLAGS="${@:--DGMX_BUILD_OWN_FFTW=ON}"
 EXPERIMENT_DIR_PATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
 EXPERIMENTS_DIR_PATH=$(dirname $EXPERIMENT_DIR_PATH)
 SOURCE_DIR_PATH=$(dirname $EXPERIMENTS_DIR_PATH)
-INPUT_DIR_PATH=$EXPERIMENT_PATH/input
+INPUT_DIR_PATH=$EXPERIMENT_DIR_PATH/input
 TRIAL_NUMBER=1
-TRIAL_PATH="${EXPERIMENT_PATH}/trials/trial-${TRIAL_NUMBER}"
+TRIAL_PATH="${EXPERIMENT_DIR_PATH}/trials/trial-${TRIAL_NUMBER}"
 TRIAL_SAMPLES_AMOUNT=1
 TEXT_BOLD=$(tput bold)
 TEXT_CYAN=$(tput setaf 6)
@@ -36,20 +36,20 @@ function main {
 # -------------------------------------------------------------------------------------------------
 
 function do_setup {
-  mkdir -p $EXPERIMENT_PATH/trials
+  mkdir -p $EXPERIMENT_DIR_PATH/trials
 
   update_trial_number
   update_trial_path
 }
 
 function update_trial_number {
-  while [[ -d "${EXPERIMENT_PATH}/trials/trial-${TRIAL_NUMBER}" ]] ; do
+  while [[ -d "${EXPERIMENT_DIR_PATH}/trials/trial-${TRIAL_NUMBER}" ]] ; do
     TRIAL_NUMBER=$(($TRIAL_NUMBER+1))
   done
 }
 
 function update_trial_path {
-  TRIAL_PATH="${EXPERIMENT_PATH}/trials/trial-${TRIAL_NUMBER}"
+  TRIAL_PATH="${EXPERIMENT_DIR_PATH}/trials/trial-${TRIAL_NUMBER}"
   mkdir $TRIAL_PATH
 }
 
@@ -137,9 +137,10 @@ function run_sample {
 
   log_sample_message $sample_number "Running simulation profiling. Logs are being stored at ${sample_log_file_path}. Perf data is being stored at ${sample_perf_file_path}"
   docker run \
-    --cap-add SYS_ADMIN \
+    --privileged \
     --mount type=bind,source=$output_dir,target=/root/experiment \
     mo833a/gromacs:ativ-4-exp-1 \
+    perf record gmx mdrun -v -deffnm em \
     &> $sample_log_file_path
 
   mv $output_dir/perf.data $sample_perf_file_path
