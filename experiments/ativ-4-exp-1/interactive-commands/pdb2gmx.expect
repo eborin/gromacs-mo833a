@@ -1,0 +1,10 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+spawn $::env(GMX_BIN) pdb2gmx -f $::env(INPUT_DIR)/6LVN.pdb -o 6LVN_processed.gro -water spce
+
+expect "Select the Force Field:*"
+send -- "15\r"
+
+expect eof
