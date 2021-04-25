@@ -42,8 +42,8 @@ function refresh_compile_stage_image {
 
   pushd $SOURCE_DIR_PATH &> /dev/null
   docker build --target compile-stage \
-    --cache-from=$USER/mo833a-gromacs:compile-stage \
-    --tag $USER/mo833a-gromacs:compile-stage \
+    --cache-from=mo833a/gromacs:compile-stage \
+    --tag mo833a/gromacs:compile-stage \
     -f $EXPERIMENTS_DIR_PATH/Dockerfile \
     .
   popd &> /dev/null
@@ -59,9 +59,9 @@ function refresh_runtime_image {
 
   pushd $SOURCE_DIR_PATH &> /dev/null
   docker build --target runtime \
-    --cache-from=$USER/mo833a-gromacs:compile-stage \
-    --cache-from=$USER/mo833a-gromacs:runtime \
-    --tag $USER/mo833a-gromacs:runtime \
+    --cache-from=mo833a/gromacs:compile-stage \
+    --cache-from=mo833a/gromacs:runtime \
+    --tag mo833a/gromacs:runtime \
     -f $EXPERIMENTS_DIR_PATH/Dockerfile \
     .
   popd &> /dev/null

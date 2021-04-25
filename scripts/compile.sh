@@ -5,8 +5,7 @@
 
 COMPILE_FLAGS="${@:--DGMX_BUILD_OWN_FFTW=ON}"
 SCRIPTS_DIR_PATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
-EXPERIMENTS_DIR_PATH=$(dirname ${SCRIPTS_DIR_PATH})
-SOURCE_DIR_PATH=$(dirname ${EXPERIMENTS_DIR_PATH})
+SOURCE_DIR_PATH=$(dirname ${SCRIPTS_DIR_PATH})
 BUILD_DIR_PATH="${SOURCE_DIR_PATH}/build"
 
 # Entrypoint
@@ -35,9 +34,18 @@ function ensure_required_dirs {
 function build_gromacs {
   pushd $BUILD_DIR_PATH &> /dev/null
 
-  cmake .. $COMPILE_FLAGS
+  cmake $SOURCE_DIR_PATH $COMPILE_FLAGS
   make -j6
   make install
+
+  echo "--"
+  ls build
+  echo "--"
+  ls build/gromacs
+  echo "--"
+  ls /usr/local
+  echo "--"
+  ls /usr/local/gromacs
 
   popd &> /dev/null
 }

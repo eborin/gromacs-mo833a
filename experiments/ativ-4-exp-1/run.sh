@@ -5,7 +5,8 @@
 
 COMPILE_FLAGS="${@:--DGMX_BUILD_OWN_FFTW=ON}"
 EXPERIMENT_DIR_PATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
-SOURCE_DIR_PATH=$(dirname $(dirname ${EXPERIMENT_PATH}))
+EXPERIMENTS_DIR_PATH=$(dirname $EXPERIMENT_DIR_PATH)
+SOURCE_DIR_PATH=$(dirname $EXPERIMENTS_DIR_PATH)
 INPUT_DIR_PATH=$EXPERIMENT_PATH/input
 TRIAL_NUMBER=1
 TRIAL_PATH="${EXPERIMENT_PATH}/trials/trial-${TRIAL_NUMBER}"
@@ -122,29 +123,27 @@ function run_trial {
 function prepare_trial {
   echo "Preparing trial"
 
-  $EXPERIMENT_DIR_PATH/scripts/refresh-containers.sh
+  $EXPERIMENTS_DIR_PATH/scripts/refresh-containers.sh
+  docker build -t mo833a/gromacs:ativ-4-exp-1 -f $EXPERIMENT_DIR_PATH/Dockerfile $EXPERIMENT_DIR_PATH
 }
 
 function run_sample {
   sample_number=$1
-  data_dir=$TRIAL_PATH/data
-  log_file=$TRIAL_PATH/sample-${sample_number}.log
-  perf_data=$TRIAL_PATH/sample-${sample_number}-perf.data
+  sample_log_file_path=$TRIAL_PATH/sample-${sample_number}.log
+  sample_perf_file_path=$TRIAL_PATH/sample-${sample_number}.perf
+  output_dir=$TRIAL_PATH/output
 
-  pushd $data_dir &> /dev/null
+  mkdir -p $output_dir
 
-  log_sample_message $sample_number "Running simulation profiling. Logs are being stored at ${log_file}. Perf data is being stored at ${perf_data}"
-  gmx=
+  log_sample_message $sample_number "Running simulation profiling. Logs are being stored at ${sample_log_file_path}. Perf data is being stored at ${sample_perf_file_path}"
+  docker run \
+    --cap-add SYS_ADMIN \
+    --mount type=bind,source=$output_dir,target=/root/experiment \
+    mo833a/gromacs:ativ-4-exp-1 \
+    &> $sample_log_file_path
 
-  perf record -o $perf_data  mdrun -v -deffnm em &>> $log_file
-
-  popd &> /dev/null
-}
-
-function run_gmx_command {
-  echo
-  echo "Running GMX command: ${TEXT_BOLD}${TEXT_CYAN}$@${TEXT_RESET}"
-  $GMX_BIN $@
+  mv $output_dir/perf.data $sample_perf_file_path
+  rm -rf $output_dir
 }
 
 function log_sample_message {

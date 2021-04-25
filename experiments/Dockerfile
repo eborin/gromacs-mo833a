@@ -14,7 +14,7 @@ RUN apk update && \
     libstdc++
 
 COPY . .
-RUN /bin/sh experiments/scripts/compile.sh
+RUN /bin/sh scripts/compile.sh
 
 # Runtime image
 # -------------------------------------------------------------------------------------------------
@@ -24,5 +24,5 @@ WORKDIR /root
 
 RUN apk add --no-cache g++
 
-COPY --from=compile-stage /usr/lib/gromacs /usr/lib/gromacs
-ENV PATH "/usr/lib/gromacs/bin:${PATH}"
+COPY --from=compile-stage /usr/local/gromacs /usr/local/gromacs
+ENV PATH "/usr/local/gromacs/bin:${PATH}"
