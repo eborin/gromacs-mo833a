@@ -1,8 +1,0 @@
-{
-  "image": "mcr.microsoft.com/vscode/devcontainers/cpp",
-  "postCreateCommand": "bash scripts/install-dev-tools.sh",
-  "runArgs": [
-    "--cap-add",
-    "SYS_ADMIN"
-  ]
-}
