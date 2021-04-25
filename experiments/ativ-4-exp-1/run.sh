@@ -131,20 +131,14 @@ function run_sample {
   sample_number=$1
   sample_log_file_path=$TRIAL_PATH/sample-${sample_number}.log
   sample_perf_file_path=$TRIAL_PATH/sample-${sample_number}.perf
-  output_dir=$TRIAL_PATH/output
-
-  mkdir -p $output_dir
 
   log_sample_message $sample_number "Running simulation profiling. Logs are being stored at ${sample_log_file_path}. Perf data is being stored at ${sample_perf_file_path}"
   docker run \
     --privileged \
-    --mount type=bind,source=$output_dir,target=/root/experiment \
+    -v /:/host \
     mo833a/gromacs:ativ-4-exp-1 \
-    perf record gmx mdrun -v -deffnm em \
+    perf report --symfs /host \
     &> $sample_log_file_path
-
-  mv $output_dir/perf.data $sample_perf_file_path
-  rm -rf $output_dir
 }
 
 function log_sample_message {
