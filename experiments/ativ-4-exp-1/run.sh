@@ -110,7 +110,7 @@ function log_next_steps {
     -v /:/host \\
     -it \\
     mo833a/gromacs:ativ-4-exp-1 \\
-    bin/sh${TEXT_RESET}
+    /bin/sh${TEXT_RESET}
 EOF
 
   echo
