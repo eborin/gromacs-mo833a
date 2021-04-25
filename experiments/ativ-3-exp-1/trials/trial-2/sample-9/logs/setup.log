@@ -1,0 +1,637 @@
+
+Running interactive GMX command: [1m[36m/workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/interactive-commands/pdb2gmx.expect(B[m
+spawn /workspaces/gromacs-mo833a/build/bin/gmx pdb2gmx -f /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/6LVN.pdb -o 6LVN_processed.gro -water spce
+   :-) GROMACS - gmx pdb2gmx, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx pdb2gmx, version 2020.2-dev-20210425-3aec20890-dirty-unknown
+Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
+Data prefix:  /workspaces/gromacs-mo833a (source tree)
+Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-9/data
+Command line:
+  gmx pdb2gmx -f /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/6LVN.pdb -o 6LVN_processed.gro -water spce
+
+
+Select the Force Field:
+From '/workspaces/gromacs-mo833a/share/top':
+ 1: AMBER03 protein, nucleic AMBER94 (Duan et al., J. Comp. Chem. 24, 1999-2012, 2003)
+ 2: AMBER94 force field (Cornell et al., JACS 117, 5179-5197, 1995)
+ 3: AMBER96 protein, nucleic AMBER94 (Kollman et al., Acc. Chem. Res. 29, 461-469, 1996)
+ 4: AMBER99 protein, nucleic AMBER94 (Wang et al., J. Comp. Chem. 21, 1049-1074, 2000)
+ 5: AMBER99SB protein, nucleic AMBER94 (Hornak et al., Proteins 65, 712-725, 2006)
+ 6: AMBER99SB-ILDN protein, nucleic AMBER94 (Lindorff-Larsen et al., Proteins 78, 1950-58, 2010)
+ 7: AMBERGS force field (Garcia & Sanbonmatsu, PNAS 99, 2782-2787, 2002)
+ 8: CHARMM27 all-atom force field (CHARM22 plus CMAP for proteins)
+ 9: GROMOS96 43a1 force field
+10: GROMOS96 43a2 force field (improved alkane dihedrals)
+11: GROMOS96 45a3 force field (Schuler JCC 2001 22 1205)
+12: GROMOS96 53a5 force field (JCC 2004 vol 25 pag 1656)
+13: GROMOS96 53a6 force field (JCC 2004 vol 25 pag 1656)
+14: GROMOS96 54a7 force field (Eur. Biophys. J. (2011), 40,, 843-856, DOI: 10.1007/s00249-011-0700-9)
+15: OPLS-AA/L all-atom force field (2001 aminoacid dihedrals)
+15
+
+Using the Oplsaa force field in directory oplsaa.ff
+
+going to rename oplsaa.ff/aminoacids.r2b
+Opening force field file /workspaces/gromacs-mo833a/share/top/oplsaa.ff/aminoacids.r2b
+Reading /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/6LVN.pdb...
+Read 'SPIKE PROTEIN S2'', 1078 atoms
+Analyzing pdb file
+Splitting chemical chains based on TER records or chain id changing.
+Moved all the water blocks to the end
+There are 4 chains and 4 blocks of water and 158 residues with 1078 atoms
+
+  chain  #res #atoms
+  1 'A'    34    264  
+  2 'B'    35    272  
+  3 'C'    33    256  
+  4 'D'    34    264  
+  5 ' '     6      6  (only water)
+  6 ' '     9      9  (only water)
+  7 ' '     5      5  (only water)
+  8 ' '     2      2  (only water)
+
+All occupancies are one
+Opening force field file /workspaces/gromacs-mo833a/share/top/oplsaa.ff/atomtypes.atp
+Reading residue database... (Oplsaa)
+Opening force field file /workspaces/gromacs-mo833a/share/top/oplsaa.ff/aminoacids.rtp
+Opening force field file /workspaces/gromacs-mo833a/share/top/oplsaa.ff/aminoacids.hdb
+Opening force field file /workspaces/gromacs-mo833a/share/top/oplsaa.ff/aminoacids.n.tdb
+Opening force field file /workspaces/gromacs-mo833a/share/top/oplsaa.ff/aminoacids.c.tdb
+Processing chain 1 'A' (264 atoms, 34 residues)
+Identified residue ILE2 as a starting terminus.
+Identified residue GLU35 as a ending terminus.
+8 out of 8 lines of specbond.dat converted successfully
+Start terminus ILE-2: NH3+
+End terminus GLU-35: COO-
+Checking for duplicate atoms....
+Generating any missing hydrogen atoms and/or adding termini.
+Now there are 34 residues with 538 atoms
+Chain time...
+Making bonds...
+Number of bonds was 537, now 537
+Generating angles, dihedrals and pairs...
+Before cleaning: 1414 pairs
+Before cleaning: 1414 dihedrals
+Keeping all generated dihedrals
+Making cmap torsions...
+There are 1414 dihedrals,   91 impropers,  978 angles
+          1414 pairs,      537 bonds and     0 virtual sites
+Total mass 3777.236 a.m.u.
+Total charge -3.000 e
+Writing topology
+Processing chain 2 'B' (272 atoms, 35 residues)
+Identified residue ILE2 as a starting terminus.
+Identified residue LEU36 as a ending terminus.
+8 out of 8 lines of specbond.dat converted successfully
+Start terminus ILE-2: NH3+
+End terminus LEU-36: COO-
+Checking for duplicate atoms....
+Generating any missing hydrogen atoms and/or adding termini.
+Now there are 35 residues with 557 atoms
+Chain time...
+Making bonds...
+Number of bonds was 556, now 556
+Generating angles, dihedrals and pairs...
+Before cleaning: 1466 pairs
+Before cleaning: 1466 dihedrals
+Keeping all generated dihedrals
+Making cmap torsions...
+There are 1466 dihedrals,   93 impropers, 1014 angles
+          1466 pairs,      556 bonds and     0 virtual sites
+Total mass 3890.396 a.m.u.
+Total charge -3.000 e
+Writing topology
+Processing chain 3 'C' (256 atoms, 33 residues)
+Identified residue SER3 as a starting terminus.
+Identified residue GLU35 as a ending terminus.
+8 out of 8 lines of specbond.dat converted successfully
+Start terminus SER-3: NH3+
+End terminus GLU-35: COO-
+Checking for duplicate atoms....
+Generating any missing hydrogen atoms and/or adding termini.
+Now there are 33 residues with 519 atoms
+Chain time...
+Making bonds...
+Number of bonds was 518, now 518
+Generating angles, dihedrals and pairs...
+Before cleaning: 1362 pairs
+Before cleaning: 1362 dihedrals
+Keeping all generated dihedrals
+Making cmap torsions...
+There are 1362 dihedrals,   89 impropers,  942 angles
+          1362 pairs,      518 bonds and     0 virtual sites
+Total mass 3664.076 a.m.u.
+Total charge -3.000 e
+Writing topology
+Processing chain 4 'D' (264 atoms, 34 residues)
+Identified residue ILE2 as a starting terminus.
+Identified residue GLU35 as a ending terminus.
+8 out of 8 lines of specbond.dat converted successfully
+Start terminus ILE-2: NH3+
+End terminus GLU-35: COO-
+Checking for duplicate atoms....
+Generating any missing hydrogen atoms and/or adding termini.
+Now there are 34 residues with 538 atoms
+Chain time...
+Making bonds...
+Number of bonds was 537, now 537
+Generating angles, dihedrals and pairs...
+Before cleaning: 1414 pairs
+Before cleaning: 1414 dihedrals
+Keeping all generated dihedrals
+Making cmap torsions...
+There are 1414 dihedrals,   91 impropers,  978 angles
+          1414 pairs,      537 bonds and     0 virtual sites
+Total mass 3777.236 a.m.u.
+Total charge -3.000 e
+Writing topology
+Processing chain 5 (6 atoms, 6 residues)
+Problem with chain definition, or missing terminal residues.
+This chain does not appear to contain a recognized chain molecule.
+If this is incorrect, you can edit residuetypes.dat to modify the behavior.
+8 out of 8 lines of specbond.dat converted successfully
+Checking for duplicate atoms....
+Generating any missing hydrogen atoms and/or adding termini.
+Now there are 6 residues with 18 atoms
+Making bonds...
+Number of bonds was 12, now 12
+Generating angles, dihedrals and pairs...
+Making cmap torsions...
+There are    0 dihedrals,    0 impropers,    6 angles
+             0 pairs,       12 bonds and     0 virtual sites
+Total mass 108.092 a.m.u.
+Total charge 0.000 e
+Processing chain 6 (9 atoms, 9 residues)
+Problem with chain definition, or missing terminal residues.
+This chain does not appear to contain a recognized chain molecule.
+If this is incorrect, you can edit residuetypes.dat to modify the behavior.
+8 out of 8 lines of specbond.dat converted successfully
+Checking for duplicate atoms....
+Generating any missing hydrogen atoms and/or adding termini.
+Now there are 9 residues with 27 atoms
+Making bonds...
+Number of bonds was 18, now 18
+Generating angles, dihedrals and pairs...
+Making cmap torsions...
+There are    0 dihedrals,    0 impropers,    9 angles
+             0 pairs,       18 bonds and     0 virtual sites
+Total mass 162.139 a.m.u.
+Total charge 0.000 e
+Processing chain 7 (5 atoms, 5 residues)
+Problem with chain definition, or missing terminal residues.
+This chain does not appear to contain a recognized chain molecule.
+If this is incorrect, you can edit residuetypes.dat to modify the behavior.
+8 out of 8 lines of specbond.dat converted successfully
+Checking for duplicate atoms....
+Generating any missing hydrogen atoms and/or adding termini.
+Now there are 5 residues with 15 atoms
+Making bonds...
+Number of bonds was 10, now 10
+Generating angles, dihedrals and pairs...
+Making cmap torsions...
+There are    0 dihedrals,    0 impropers,    5 angles
+             0 pairs,       10 bonds and     0 virtual sites
+Total mass 90.077 a.m.u.
+Total charge 0.000 e
+Processing chain 8 (2 atoms, 2 residues)
+Problem with chain definition, or missing terminal residues.
+This chain does not appear to contain a recognized chain molecule.
+If this is incorrect, you can edit residuetypes.dat to modify the behavior.
+8 out of 8 lines of specbond.dat converted successfully
+Checking for duplicate atoms....
+Generating any missing hydrogen atoms and/or adding termini.
+Now there are 2 residues with 6 atoms
+Making bonds...
+Number of bonds was 4, now 4
+Generating angles, dihedrals and pairs...
+Making cmap torsions...
+There are    0 dihedrals,    0 impropers,    2 angles
+             0 pairs,        4 bonds and     0 virtual sites
+Total mass 36.031 a.m.u.
+Total charge 0.000 e
+Including chain 1 in system: 538 atoms 34 residues
+Including chain 2 in system: 557 atoms 35 residues
+Including chain 3 in system: 519 atoms 33 residues
+Including chain 4 in system: 538 atoms 34 residues
+Including chain 5 in system: 18 atoms 6 residues
+Including chain 6 in system: 27 atoms 9 residues
+Including chain 7 in system: 15 atoms 5 residues
+Including chain 8 in system: 6 atoms 2 residues
+Now there are 2218 atoms and 158 residues
+Total mass in system 15505.283 a.m.u.
+Total charge in system -12.000 e
+
+Writing coordinate file...
+		--------- PLEASE NOTE ------------
+You have successfully generated a topology from: /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/6LVN.pdb.
+The Oplsaa force field and the spce water model are used.
+		--------- ETON ESAELP ------------
+
+GROMACS reminds you: "The three principal virtues of a programmer are Laziness, Impatience, and Hubris" (Larry Wall)
+
+
+Running GMX command: [1m[36meditconf -f 6LVN_processed.gro -o 6LVN_newbox.gro -c -d 1.0 -bt cubic(B[m
+  :-) GROMACS - gmx editconf, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx editconf, version 2020.2-dev-20210425-3aec20890-dirty-unknown
+Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
+Data prefix:  /workspaces/gromacs-mo833a (source tree)
+Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-9/data
+Command line:
+  gmx editconf -f 6LVN_processed.gro -o 6LVN_newbox.gro -c -d 1.0 -bt cubic
+
+
+GROMACS reminds you: "What if you're wrong about the great Ju Ju at the bottom of the sea?" (Richard Dawkins)
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 2218 atoms
+Volume: 125.595 nm^3, corresponds to roughly 56500 electrons
+No velocities found
+    system size :  4.554  5.263  4.981 (nm)
+    diameter    :  6.088               (nm)
+    center      :  0.784  3.506  4.541 (nm)
+    box vectors :  2.819  4.973  8.958 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  : 125.60               (nm^3)
+    shift       :  3.260  0.538 -0.497 (nm)
+new center      :  4.044  4.044  4.044 (nm)
+new box vectors :  8.088  8.088  8.088 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  : 529.02               (nm^3)
+
+Running GMX command: [1m[36msolvate -cp 6LVN_newbox.gro -cs spc216.gro -o 6LVN_solv.gro -p topol.top(B[m
+   :-) GROMACS - gmx solvate, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx solvate, version 2020.2-dev-20210425-3aec20890-dirty-unknown
+Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
+Data prefix:  /workspaces/gromacs-mo833a (source tree)
+Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-9/data
+Command line:
+  gmx solvate -cp 6LVN_newbox.gro -cs spc216.gro -o 6LVN_solv.gro -p topol.top
+
+Reading solute configuration
+Reading solvent configuration
+
+Initialising inter-atomic distances...
+
+WARNING: Masses and atomic (Van der Waals) radii will be guessed
+         based on residue and atom names, since they could not be
+         definitively assigned from the information in your input
+         files. These guessed numbers might deviate from the mass
+         and radius of the atom type. Please check the output
+         files if necessary.
+
+NOTE: From version 5.0 gmx solvate uses the Van der Waals radii
+from the source below. This means the results may be different
+compared to previous GROMACS versions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+A. Bondi
+van der Waals Volumes and Radii
+J. Phys. Chem. 68 (1964) pp. 441-451
+-------- -------- --- Thank You --- -------- --------
+
+Generating solvent configuration
+Will generate new solvent configuration of 5x5x5 boxes
+Solvent box contains 59070 atoms in 19690 residues
+Removed 7095 solvent atoms due to solvent-solvent overlap
+Removed 2061 solvent atoms due to solute-solvent overlap
+Sorting configuration
+Found 1 molecule type:
+    SOL (   3 atoms): 16638 residues
+Generated solvent containing 49914 atoms in 16638 residues
+Writing generated configuration to 6LVN_solv.gro
+
+Output configuration contains 52132 atoms in 16796 residues
+Volume                 :     529.024 (nm^3)
+Density                :     992.908 (g/l)
+Number of solvent molecules:  16638   
+
+Processing topology
+
+Back Off! I just backed up topol.top to ./#topol.top.1#
+
+GROMACS reminds you: "Wicky-wicky Wa-wild West" (Will Smith)
+
+Adding line for 16638 solvent molecules with resname (SOL) to topology file (topol.top)
+
+Running GMX command: [1m[36mgrompp -f /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp -c 6LVN_solv.gro -p topol.top -o ions.tpr(B[m
+   :-) GROMACS - gmx grompp, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2020.2-dev-20210425-3aec20890-dirty-unknown
+Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
+Data prefix:  /workspaces/gromacs-mo833a (source tree)
+Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-9/data
+Command line:
+  gmx grompp -f /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp -c 6LVN_solv.gro -p topol.top -o ions.tpr
+
+Ignoring obsolete mdp entry 'ns_type'
+
+NOTE 1 [file /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Setting the LD random seed to 1248276148
+Generated 330891 of the 330891 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 330891 of the 330891 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+Excluding 3 bonded neighbours molecule type 'Protein_chain_B'
+Excluding 3 bonded neighbours molecule type 'Protein_chain_C'
+Excluding 3 bonded neighbours molecule type 'Protein_chain_D'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+NOTE 2 [file topol.top, line 56]:
+  System has non-zero total charge: -12.000000
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+Number of degrees of freedom in T-Coupling group rest is 106413.00
+
+NOTE 3 [file /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp]:
+  You are using a plain Coulomb cut-off, which might produce artifacts.
+  You might want to consider using PME electrostatics.
+
+
+
+There were 3 notes
+
+GROMACS reminds you: "What They Need's a Damn Good Whacking" (The Beatles)
+
+Analysing residue names:
+There are:   136    Protein residues
+There are: 16660      Water residues
+Analysing Protein...
+This run will generate roughly 4 Mb of data
+
+Running interactive GMX command: [1m[36m/workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/interactive-commands/genion.expect(B[m
+spawn /workspaces/gromacs-mo833a/build/bin/gmx genion -s ions.tpr -o 6LVN_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+   :-) GROMACS - gmx genion, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx genion, version 2020.2-dev-20210425-3aec20890-dirty-unknown
+Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
+Data prefix:  /workspaces/gromacs-mo833a (source tree)
+Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-9/data
+Command line:
+  gmx genion -s ions.tpr -o 6LVN_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+
+Reading file ions.tpr, VERSION 2020.2-dev-20210425-3aec20890-dirty-unknown (single precision)
+Reading file ions.tpr, VERSION 2020.2-dev-20210425-3aec20890-dirty-unknown (single precision)
+Will try to add 12 NA ions and 0 CL ions.
+Select a continuous group of solvent molecules
+13
+Group     0 (         System) has 52132 elements
+Group     1 (        Protein) has  2152 elements
+Group     2 (      Protein-H) has  1060 elements
+Group     3 (        C-alpha) has   136 elements
+Group     4 (       Backbone) has   408 elements
+Group     5 (      MainChain) has   548 elements
+Group     6 (   MainChain+Cb) has   680 elements
+Group     7 (    MainChain+H) has   692 elements
+Group     8 (      SideChain) has  1460 elements
+Group     9 (    SideChain-H) has   512 elements
+Group    10 (    Prot-Masses) has  2152 elements
+Group    11 (    non-Protein) has 49980 elements
+Group    12 (          Water) has 49980 elements
+Group    13 (            SOL) has 49980 elements
+Group    14 (      non-Water) has  2152 elements
+Select a group: Selected 13: 'SOL'
+Number of (3-atomic) solvent molecules: 16660
+
+Processing topology
+Replacing 12 solute molecules in topology file (topol.top)  by 12 NA and 0 CL ions.
+
+Back Off! I just backed up topol.top to ./#topol.top.2#
+Using random seed -60897690.
+Replacing solvent molecule 1420 (atom 6412) with NA
+Replacing solvent molecule 901 (atom 4855) with NA
+Replacing solvent molecule 10202 (atom 32758) with NA
+Replacing solvent molecule 758 (atom 4426) with NA
+Replacing solvent molecule 2998 (atom 11146) with NA
+Replacing solvent molecule 16645 (atom 52087) with NA
+Replacing solvent molecule 6866 (atom 22750) with NA
+Replacing solvent molecule 11241 (atom 35875) with NA
+Replacing solvent molecule 1754 (atom 7414) with NA
+Replacing solvent molecule 1047 (atom 5293) with NA
+Replacing solvent molecule 10066 (atom 32350) with NA
+Replacing solvent molecule 1897 (atom 7843) with NA
+
+
+GROMACS reminds you: "Nothing is more anarchic than power." (Pier Paolo Pasolini)
+
+
+Running GMX command: [1m[36mgrompp -f /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp -c 6LVN_solv_ions.gro -p topol.top -o em.tpr(B[m
+   :-) GROMACS - gmx grompp, 2020.2-dev-20210425-3aec20890-dirty-unknown (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2020.2-dev-20210425-3aec20890-dirty-unknown
+Executable:   /workspaces/gromacs-mo833a/build/bin/gmx
+Data prefix:  /workspaces/gromacs-mo833a (source tree)
+Working dir:  /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-9/data
+Command line:
+  gmx grompp -f /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp -c 6LVN_solv_ions.gro -p topol.top -o em.tpr
+
+Ignoring obsolete mdp entry 'ns_type'
+
+NOTE 1 [file /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Setting the LD random seed to 1498287871
+Generated 330891 of the 330891 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 330891 of the 330891 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+Excluding 3 bonded neighbours molecule type 'Protein_chain_B'
+Excluding 3 bonded neighbours molecule type 'Protein_chain_C'
+Excluding 3 bonded neighbours molecule type 'Protein_chain_D'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Excluding 1 bonded neighbours molecule type 'NA'
+Number of degrees of freedom in T-Coupling group rest is 106377.00
+
+NOTE 2 [file /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input/ions.mdp]:
+  You are using a plain Coulomb cut-off, which might produce artifacts.
+  You might want to consider using PME electrostatics.
+
+
+
+There were 2 notes
+
+GROMACS reminds you: "It's Not Dark Yet, But It's Getting There" (Bob Dylan)
+
+Analysing residue names:
+There are:   136    Protein residues
+There are: 16648      Water residues
+There are:    12        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+This run will generate roughly 4 Mb of data

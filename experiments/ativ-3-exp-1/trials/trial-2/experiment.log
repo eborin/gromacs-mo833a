@@ -1,0 +1,655 @@
+[1m[36mWelcome(B[m
+You are running [1m[36mGROMACS ativ-3-exp-1(B[m experiment
+This is the [1m[36mtrial number 2(B[m, which uses 10 samples
+
+[1m[35mEXPERIMENT SETTINGS(B[m
+------------------------------------------------------------------------------------------------------------------------------------------------------
+> [1mHardware details:(B[m 
+> [1mEnvironment variables:(B[m 
+>    BROWSER=/vscode/vscode-server-insiders/bin/x64/8aff878db2542eea2dfb571c8bb485118bbb3113-insider/bin/helpers/browser.sh
+>    COLORTERM=truecolor
+>    GIT_ASKPASS=/vscode/vscode-server-insiders/bin/x64/8aff878db2542eea2dfb571c8bb485118bbb3113-insider/extensions/git/dist/askpass.sh
+>    GMX_BIN=/workspaces/gromacs-mo833a/build/bin/gmx
+>    HOME=/root
+>    HOSTNAME=a3e1630256f1
+>    INPUT_DIR=/workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/input
+>    LANG=en_US.UTF-8
+>    LESS=-R
+>    LOGNAME=root
+>    LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+>    LSCOLORS=Gxfxcxdxbxegedabagacad
+>    OLDPWD=/workspaces/gromacs-mo833a
+>    PAGER=less
+>    PATH=/vscode/vscode-server-insiders/bin/x64/8aff878db2542eea2dfb571c8bb485118bbb3113-insider/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin
+>    PWD=/workspaces/gromacs-mo833a/experiments/ativ-3-exp-1
+>    REMOTE_CONTAINERS=true
+>    REMOTE_CONTAINERS_IPC=/tmp/vscode-remote-containers-ipc-10a5c4d4157055b779fc5c7da62d5237bc2a0b28.sock
+>    REMOTE_CONTAINERS_SOCKETS=["/root/.gnupg/S.gpg-agent"]
+>    SHELL=/bin/bash
+>    SHLVL=2
+>    TERM=xterm-256color
+>    TERM_PROGRAM=vscode
+>    TERM_PROGRAM_VERSION=1.56.0-insider
+>    USER=root
+>    VSCODE_GIT_ASKPASS_MAIN=/vscode/vscode-server-insiders/bin/x64/8aff878db2542eea2dfb571c8bb485118bbb3113-insider/extensions/git/dist/askpass-main.js
+>    VSCODE_GIT_ASKPASS_NODE=/vscode/vscode-server-insiders/bin/x64/8aff878db2542eea2dfb571c8bb485118bbb3113-insider/node
+>    VSCODE_GIT_IPC_HANDLE=/tmp/vscode-git-f9fa812531.sock
+>    VSCODE_IPC_HOOK_CLI=/tmp/vscode-ipc-1f65d60f-155a-40fe-89b1-ea446f51527c.sock
+>    ZSH=/root/.oh-my-zsh
+> [1mCompile flags:(B[m 
+>    -DGMX_BUILD_OWN_FFTW=ON
+>    -DCMAKE_BUILD_TYPE=Debug
+> [1mGit HEAD revision:(B[m 3aec208908d921cbe1cc09e4a73f11dd5951bb23
+> [1mTrial number:(B[m 2
+> [1mAmount of samples:(B[m 10
+
+[1m[35mCOMPILATION(B[m
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Building GROMACS
+Compiling from: /workspaces/gromacs-mo833a
+-- The GROMACS-managed build of FFTW 3 will configure with the following optimizations: --enable-sse2;--enable-avx;--enable-avx2
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Doxygen not found. Documentation targets will not be generated.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /workspaces/gromacs-mo833a/build
+[  0%] Generating git version information
+[  2%] Built target tng_io_obj
+[  2%] Built target scanner
+[  4%] Built target tng_io_zlib
+[  4%] Built target fftwBuild
+[  5%] Built target thread_mpi
+[  5%] Built target lmfit_objlib
+[  5%] Built target vmddlopen
+[  5%] Built target view_objlib
+[  8%] Built target modularsimulator
+[  9%] Built target mdrun_objlib
+[ 28%] Built target linearalgebra
+[ 28%] Built target git-version-info
+[ 97%] Built target libgromacs
+[ 98%] Built target template
+[ 98%] Built target gmx
+[100%] Built target gmxapi
+[100%] Built target completion
+[  1%] Built target fftwBuild
+[  1%] Built target scanner
+[  1%] Generating git version information
+[  1%] Built target git-version-info
+[  2%] Built target thread_mpi
+[  5%] Built target tng_io_obj
+[  5%] Built target tng_io_zlib
+[  5%] Built target lmfit_objlib
+[ 24%] Built target linearalgebra
+[ 27%] Built target modularsimulator
+[ 27%] Built target vmddlopen
+[ 95%] Built target libgromacs
+[ 95%] Built target template
+[ 95%] Built target view_objlib
+[ 97%] Built target mdrun_objlib
+[ 98%] Built target gmx
+[ 98%] Built target completion
+[100%] Built target gmxapi
+Install the project...
+-- Install configuration: "Debug"
+-- Up-to-date: /usr/local/gromacs/share/gromacs/COPYING
+-- Up-to-date: /usr/local/gromacs/share/gromacs/README.tutor
+-- Up-to-date: /usr/local/gromacs/share/gromacs/README_FreeEnergyModifications.txt
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/ff_dum.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/popc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/dppc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos54a7.ff/tmcl.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/ff_dum.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a2.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ca-shift.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/vdwradii.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/nsfactor.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/tip5p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/urea.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/rna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/rna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/dna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/aminoacids.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/dna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/dna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/tip4pew.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/rna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/rna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb.ff/dna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/table6-12.xvg
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/flexspc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/cb-shift.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ffoplsaa.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/residues.xml
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/dgsolv.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/co-shift.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/edissoc.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/table6-9.xvg
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/tip5p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/urea.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/rna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/rna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/dna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/aminoacids.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/dna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/dna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/tip4pew.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/rna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/rna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber03.ff/dna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/tip5p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/urea.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/rna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/rna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/dna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/aminoacids.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/dna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/dna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/tip4pew.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/rna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/rna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber96.ff/dna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/spc216.gro
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/ff_dum.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos45a3.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/atom_nom.tbl
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ffG45a3.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/residues.dtd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ha-shift.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/elements.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ffG53a6.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/tip5p.gro
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/ff_dum.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/atomname2type.n2t
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a5.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/atommass.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/ff_dum.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/methanol.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/methanol216.gro
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos43a1.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/tip5p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/urea.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/rna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/rna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/dna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/aminoacids.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/dna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/dna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/tip4pew.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/rna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/rna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99.ff/dna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/tips3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/ffnanonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/tip5p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/ffnabonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/rna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/cmap.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/rna.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/dna.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/rna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/rna.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/lipids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/dna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/aminoacids.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/dna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/lipids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/dna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/dna.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/rna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/rna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/charmm27.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/table6-11.xvg
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/sw.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/tip5p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/urea.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/rna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/rna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/dna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/aminoacids.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/dna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/dna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/tip4pew.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/rna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/rna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber99sb-ildn.ff/dna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ps.m2p
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ffoplsaa-n.tst
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/table6-8.xvg
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/phbres.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ss.map
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ffG43a1.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/flexspce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/specbond.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/tip5p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/urea.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/rna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/rna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/dna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/aminoacids.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/dna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/dna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/tip4pew.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/rna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/rna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amberGS.ff/dna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/table6-10.xvg
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/residuetypes.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ffG53a5.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/ffG43a2.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/refi_aa.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/surface.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/tip4p.gro
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/export.dlg
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/xlateat.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/sfactor.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/defselection.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/flexwat-ferguson.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/tip5p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/urea.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/rna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/rna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/dna.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/aminoacids.arn
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/dna.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/dna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/tip4pew.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/rna.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/rna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/amber94.ff/dna.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/vdw-msms.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/bonds.dlg
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/1propanol.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/tip5p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/tip5pe.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/atomname2type.n2t
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/methanol.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/tip4pew.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/ethanol.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/oplsaa.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/random.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/ff_dum.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/aminoacids.vsd
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/ffnonbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/ions.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/aminoacids.rtp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/aminoacids.r2b
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/aminoacids.n.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/forcefield.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/spc.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/tip4p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/ffbonded.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/aminoacids.hdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/atomtypes.atp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/forcefield.doc
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/spce.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/watermodels.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/tip3p.itp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/gromos53a6.ff/aminoacids.c.tdb
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/README
+-- Up-to-date: /usr/local/gromacs/share/gromacs/top/electroneg.dat
+-- Up-to-date: /usr/local/gromacs/share/gromacs/template/CMakeLists.txt
+-- Up-to-date: /usr/local/gromacs/share/gromacs/template/README
+-- Up-to-date: /usr/local/gromacs/share/gromacs/template/template.cpp
+-- Up-to-date: /usr/local/gromacs/share/gromacs/template/Makefile.pkg
+-- Up-to-date: /usr/local/gromacs/share/gromacs/template/cmake/FindGROMACS.cmake
+-- Up-to-date: /usr/local/gromacs/bin/GMXRC
+-- Up-to-date: /usr/local/gromacs/bin/GMXRC.bash
+-- Up-to-date: /usr/local/gromacs/bin/GMXRC.zsh
+-- Up-to-date: /usr/local/gromacs/bin/GMXRC.csh
+-- Up-to-date: /usr/local/gromacs/bin/demux.pl
+-- Up-to-date: /usr/local/gromacs/bin/xplor2gmx.pl
+-- Up-to-date: /usr/local/gromacs/lib/libgromacs.so.5.0.0
+-- Up-to-date: /usr/local/gromacs/lib/libgromacs.so.5
+-- Up-to-date: /usr/local/gromacs/lib/libgromacs.so
+-- Up-to-date: /usr/local/gromacs/lib/pkgconfig/libgromacs.pc
+-- Up-to-date: /usr/local/gromacs/share/cmake/gromacs/libgromacs.cmake
+-- Installing: /usr/local/gromacs/share/cmake/gromacs/libgromacs-debug.cmake
+-- Up-to-date: /usr/local/gromacs/share/cmake/gromacs/gromacs-config.cmake
+-- Up-to-date: /usr/local/gromacs/share/cmake/gromacs/gromacs-config-version.cmake
+-- Up-to-date: /usr/local/gromacs/share/cmake/gromacs/gromacs-toolchain.cmake
+-- Up-to-date: /usr/local/gromacs/include/gromacs/utility/basedefinitions.h
+-- Up-to-date: /usr/local/gromacs/include/gromacs/utility/current_function.h
+-- Up-to-date: /usr/local/gromacs/include/gromacs/utility/gmxassert.h
+-- Up-to-date: /usr/local/gromacs/include/gromacs/utility/real.h
+-- Up-to-date: /usr/local/gromacs/include/gromacs/math/vectypes.h
+-- Up-to-date: /usr/local/gromacs/include/gromacs/restraint/restraintpotential.h
+-- Up-to-date: /usr/local/gromacs/bin/gmx
+-- Up-to-date: /usr/local/gromacs/bin
+-- Up-to-date: /usr/local/gromacs/bin/gmx-completion.bash
+-- Installing: /usr/local/gromacs/bin/gmx-completion-gmx.bash
+-- Up-to-date: /usr/local/gromacs/include/gmxapi
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/gmxapicompat.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/session
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/session/resources.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/md
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/md/mdmodule.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/md/mdsignals.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/gmxapi.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/compat
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/compat/mdparams.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/compat/tpr.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/md.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/status.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/context.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/session.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/exceptions.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/system.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/gromacsfwd.h
+-- Up-to-date: /usr/local/gromacs/include/gmxapi/version.h
+-- Up-to-date: /usr/local/gromacs/lib/libgmxapi.so.0.1.0
+-- Up-to-date: /usr/local/gromacs/lib/libgmxapi.so.0
+-- Up-to-date: /usr/local/gromacs/lib/libgmxapi.so
+-- Up-to-date: /usr/local/gromacs/share/cmake/gmxapi/gmxapi.cmake
+-- Installing: /usr/local/gromacs/share/cmake/gmxapi/gmxapi-debug.cmake
+-- Up-to-date: /usr/local/gromacs/share/cmake/gmxapi/gmxapi-config-version.cmake
+-- Up-to-date: /usr/local/gromacs/share/cmake/gmxapi/gmxapi-config.cmake
+
+[1m[35mTRIAL(B[m
+------------------------------------------------------------------------------------------------------------------------------------------------------
+[1m[36m> Sample 1:(B[m Preparing
+[1m[36m> Sample 1:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-1/logs/setup.log
+[1m[36m> Sample 1:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-1/logs/simulation.log
+[1m[36m> Sample 1:(B[m Finished executing sample. The execution time result was 267.010905 seconds
+[1m[36m> Sample 2:(B[m Preparing
+[1m[36m> Sample 2:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-2/logs/setup.log
+[1m[36m> Sample 2:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-2/logs/simulation.log
+[1m[36m> Sample 2:(B[m Finished executing sample. The execution time result was 300.754636 seconds
+[1m[36m> Sample 3:(B[m Preparing
+[1m[36m> Sample 3:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-3/logs/setup.log
+[1m[36m> Sample 3:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-3/logs/simulation.log
+[1m[36m> Sample 3:(B[m Finished executing sample. The execution time result was 271.195936 seconds
+[1m[36m> Sample 4:(B[m Preparing
+[1m[36m> Sample 4:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-4/logs/setup.log
+[1m[36m> Sample 4:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-4/logs/simulation.log
+[1m[36m> Sample 4:(B[m Finished executing sample. The execution time result was 251.987985 seconds
+[1m[36m> Sample 5:(B[m Preparing
+[1m[36m> Sample 5:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-5/logs/setup.log
+[1m[36m> Sample 5:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-5/logs/simulation.log
+[1m[36m> Sample 5:(B[m Finished executing sample. The execution time result was 249.215774 seconds
+[1m[36m> Sample 6:(B[m Preparing
+[1m[36m> Sample 6:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-6/logs/setup.log
+[1m[36m> Sample 6:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-6/logs/simulation.log
+[1m[36m> Sample 6:(B[m Finished executing sample. The execution time result was 254.812255 seconds
+[1m[36m> Sample 7:(B[m Preparing
+[1m[36m> Sample 7:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-7/logs/setup.log
+[1m[36m> Sample 7:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-7/logs/simulation.log
+[1m[36m> Sample 7:(B[m Finished executing sample. The execution time result was 270.022821 seconds
+[1m[36m> Sample 8:(B[m Preparing
+[1m[36m> Sample 8:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-8/logs/setup.log
+[1m[36m> Sample 8:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-8/logs/simulation.log
+[1m[36m> Sample 8:(B[m Finished executing sample. The execution time result was 256.995612 seconds
+[1m[36m> Sample 9:(B[m Preparing
+[1m[36m> Sample 9:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-9/logs/setup.log
+[1m[36m> Sample 9:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-9/logs/simulation.log
+[1m[36m> Sample 9:(B[m Finished executing sample. The execution time result was 236.463670 seconds
+[1m[36m> Sample 10:(B[m Preparing
+[1m[36m> Sample 10:(B[m Creating simulation setup. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-10/logs/setup.log
+[1m[36m> Sample 10:(B[m Running simulation. The logs are being stored at /workspaces/gromacs-mo833a/experiments/ativ-3-exp-1/trials/trial-2/sample-10/logs/simulation.log
+[1m[36m> Sample 10:(B[m Finished executing sample. The execution time result was 277.118394 seconds
+
+[1m[35mEXPERIMENT SUMMARY(B[m
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Execution time results:
+[1m[36m> Sample 1:(B[m 267.010905 seconds
+[1m[36m> Sample 2:(B[m 300.754636 seconds
+[1m[36m> Sample 3:(B[m 271.195936 seconds
+[1m[36m> Sample 4:(B[m 251.987985 seconds
+[1m[36m> Sample 5:(B[m 249.215774 seconds
+[1m[36m> Sample 6:(B[m 254.812255 seconds
+[1m[36m> Sample 7:(B[m 270.022821 seconds
+[1m[36m> Sample 8:(B[m 256.995612 seconds
+[1m[36m> Sample 9:(B[m 236.463670 seconds
+[1m[36m> Sample 10:(B[m 277.118394 seconds
