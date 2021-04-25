@@ -121,8 +121,10 @@ function run_trial {
 }
 
 function prepare_trial {
-  echo "Preparing trial"
+  echo
+  echo "${TEXT_BOLD}${TEXT_CYAN}> Preparing trial${TEXT_RESET}"
 
+  echo "Building containers"
   $EXPERIMENTS_DIR_PATH/scripts/refresh-containers.sh
   docker build -t mo833a/gromacs:ativ-4-exp-1 -f $EXPERIMENT_DIR_PATH/Dockerfile $EXPERIMENT_DIR_PATH
 }
@@ -131,14 +133,23 @@ function run_sample {
   sample_number=$1
   sample_log_file_path=$TRIAL_PATH/sample-${sample_number}.log
   sample_perf_file_path=$TRIAL_PATH/sample-${sample_number}.perf
+  output_dir=$TRIAL_PATH/output
+
+  echo
+  echo "${TEXT_BOLD}${TEXT_CYAN}> Running sample ${sample_number}${TEXT_RESET}"
+
+  mkdir -p $output_dir
 
   log_sample_message $sample_number "Running simulation profiling. Logs are being stored at ${sample_log_file_path}. Perf data is being stored at ${sample_perf_file_path}"
   docker run \
     --privileged \
+    --mount type=bind,source=$output_dir,target=/root/experiment/output \
     -v /:/host \
     mo833a/gromacs:ativ-4-exp-1 \
-    perf report --symfs /host \
     &> $sample_log_file_path
+
+  mv $output_dir/perf.data $sample_perf_file_path
+  rm -rf $output_dir
 }
 
 function log_sample_message {
@@ -154,14 +165,12 @@ function log_sample_message {
 function log_summary {
   log_title "EXPERIMENT SUMMARY"
 
-  echo "Execution time results:"
+  echo "Finished experiment"
+  echo "You can check the perf report with the following command:"
 
-  for result in $SAMPLE_EXECUTION_TIMES; do
-    sample_number=$(echo $result | cut -d':' -f 1)
-    sample_result=$(echo $result | cut -d':' -f 2)
-
-    log_sample_message $sample_number "${sample_result} seconds"
-  done
+  cat <<EOF
+  ${TEXT_BOLD}${TEXT_CYAN}perf report -i sample-$.perf${TEXT_RESET}
+EOF
 }
 
 # Execute
