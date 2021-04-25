@@ -1,0 +1,231 @@
+[1m[36mWelcome[m
+You are running [1m[36mGROMACS ativ-4-exp-1[m experiment
+
+[1m[35mEXPERIMENT SETTINGS[m
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+> [1mHardware details:[m 
+System:    Kernel: 5.9.16-1-MANJARO x86_64 bits: 64 compiler: gcc v: 10.2.0 Desktop: bspwm 0.9.7-2-g342c2e3 
+           Distro: Manjaro Linux base: Arch Linux 
+Machine:   Type: Desktop System: Gigabyte product: Z270X-Ultra Gaming v: N/A serial: <filter> 
+           Mobo: Gigabyte model: Z270X-Ultra Gaming-CF v: x.x serial: <filter> UEFI: American Megatrends v: F8 
+           date: 10/27/2017 
+CPU:       Info: Quad Core model: Intel Core i7-7700K bits: 64 type: MT MCP arch: Kaby Lake rev: 9 cache: L2: 8 MiB 
+           flags: avx avx2 lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 vmx bogomips: 67224 
+           Speed: 800 MHz min/max: 800/4500 MHz Core speeds (MHz): 1: 800 2: 800 3: 800 4: 800 5: 800 6: 800 7: 800 8: 800 
+Graphics:  Device-1: NVIDIA GP106 [GeForce GTX 1060 6GB] vendor: Gigabyte driver: nvidia v: 460.67 bus-ID: 01:00.0 
+           Device-2: Logitech OrbiCam type: USB driver: snd-usb-audio,uvcvideo bus-ID: 1-2:2 
+           Display: x11 server: X.org 1.20.11 driver: loaded: nvidia resolution: <missing: xdpyinfo> 
+           Message: Unable to show advanced data. Required tool glxinfo missing. 
+Audio:     Device-1: Intel 200 Series PCH HD Audio vendor: Gigabyte driver: snd_hda_intel v: kernel bus-ID: 00:1f.3 
+           Device-2: NVIDIA GP106 High Definition Audio vendor: Gigabyte driver: snd_hda_intel v: kernel bus-ID: 01:00.1 
+           Device-3: Kingston HyperX QuadCast type: USB driver: hid-generic,snd-usb-audio,usbhid bus-ID: 1-10:8 
+           Device-4: Logitech OrbiCam type: USB driver: snd-usb-audio,uvcvideo bus-ID: 1-2:2 
+           Device-5: Corsair ST100 Headset Output type: USB driver: hid-generic,snd-usb-audio,usbhid bus-ID: 1-8.1:9 
+           Device-6: Kingston HyperX Cloud Flight Wireless Headset type: USB driver: hid-generic,snd-usb-audio,usbhid 
+           bus-ID: 3-1:2 
+           Sound Server-1: ALSA v: k5.9.16-1-MANJARO running: yes 
+           Sound Server-2: JACK v: 0.125.0 running: no 
+           Sound Server-3: PulseAudio v: 14.2 running: yes 
+Network:   Device-1: Intel Ethernet I219-V vendor: Gigabyte driver: e1000e v: kernel port: f000 bus-ID: 00:1f.6 
+           IF: enp0s31f6 state: up speed: 1000 Mbps duplex: full mac: <filter> 
+           Device-2: Qualcomm Atheros AR9462 Wireless Network Adapter vendor: Lite-On driver: ath9k v: kernel port: e000 
+           bus-ID: 0a:00.0 
+           IF: wlp10s0 state: down mac: <filter> 
+           IF-ID-1: docker0 state: down mac: <filter> 
+Drives:    Local Storage: total: 1.14 TiB used: 302.21 GiB (25.9%) 
+           ID-1: /dev/nvme0n1 vendor: Intel model: MEMPEK1W016GA size: 13.41 GiB temp: 54.9 C 
+           ID-2: /dev/sda vendor: Seagate model: ST1000DM003-1SB102 size: 931.51 GiB 
+           ID-3: /dev/sdb vendor: SanDisk model: SDSSDA120G size: 111.79 GiB 
+           ID-4: /dev/sdc vendor: SanDisk model: SDSSDA120G size: 111.79 GiB 
+Partition: ID-1: / size: 105.1 GiB used: 99.5 GiB (94.7%) fs: ext4 dev: /dev/sdb3 
+           ID-2: /boot/efi size: 511 MiB used: 316 KiB (0.1%) fs: vfat dev: /dev/sdb1 
+Swap:      ID-1: swap-1 type: partition size: 4 GiB used: 11 MiB (0.3%) dev: /dev/sdb2 
+Sensors:   System Temperatures: cpu: 62.0 C mobo: 27.8 C gpu: nvidia temp: 49 C 
+           Fan Speeds (RPM): N/A gpu: nvidia fan: 30% 
+Info:      Processes: 247 Uptime: 4h 44m Memory: 11.65 GiB used: 4.08 GiB (35.0%) Init: systemd Compilers: gcc: 10.2.0 
+           clang: 11.1.0 Packages: 1180 Shell: Zsh v: 5.8 inxi: 3.3.04 
+> [1mEnvironment variables:[m 
+>    BROWSER=/usr/bin/links-launch
+>    BSPWM_SOCKET=/tmp/bspwm-socket
+>    COLORTERM=truecolor
+>    COMPLETION_WAITING_DOTS=true
+>    DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-3yrIWTc8aJ,guid=e2a99384e12f8f3bb6d8f8086085ba4b
+>    DESKTOP_SESSION=bspwm
+>    DISABLE_AUTO_TITLE=true
+>    DISPLAY=:0
+>    EDITOR=/usr/bin/micro
+>    FRESH_PATH=/home/delucca/.fresh
+>    FZF_ALT_C_OPTS=
+  --select-1   --exit-0 
+>    FZF_CTRL_R_OPTS=
+  --sort   --exact   --preview-window='down:3:hidden:wrap' 
+>    FZF_CTRL_T_OPTS=
+  --select-1   --exit-0 
+>    FZF_DEFAULT_COMMAND=fd 
+  --hidden   --follow   --type='f'   --exclude='.git' 
+>    FZF_DEFAULT_COMMAND_OPTS=
+  --hidden   --follow   --type='f'   --exclude='.git' 
+>    FZF_DEFAULT_OPTS=  --ansi   --cycle   --layout='reverse'   --height='20'   --preview='(highlight -O ansi -l {} 2> /dev/null || bat --style=numbers --color=always {} || cat {} || tree -L 2 -C {}) 2> /dev/null | head -200'   --preview-window='right:70%:noborder'   --bind='?:toggle-preview'   --bind='tab:down' 
+>    GDMSESSION=bspwm
+>    GOROOT=/home/go
+>    GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:38365:1
+>    GPG_TTY=/dev/pts/1
+>    GTK2_RC_FILES=/home/delucca/.gtkrc-2.0
+>    GTK_CSD=1
+>    GTK_MODULES=canberra-gtk-module
+>    GUI_EDITOR=/usr/bin/micro-st
+>    HOME=/home/delucca
+>    _JAVA_OPTIONS=-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+>    KUBECTL_FZF_CACHE=/tmp/kubectl_fzf_cache
+>    LANG=en_US.UTF-8
+>    LC_ADDRESS=pt_BR.UTF-8
+>    LC_MEASUREMENT=pt_BR.UTF-8
+>    LC_MESSAGES=en_US.UTF-8
+>    LC_MONETARY=pt_BR.UTF-8
+>    LC_PAPER=pt_BR.UTF-8
+>    LC_TIME=pt_BR.UTF-8
+>    LOGNAME=delucca
+>    LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+>    LSCOLORS=Gxfxcxdxbxegedabagacad
+>    MINIKUBE_HOME=/home/minikube
+>    MOTD_SHOWN=pam
+>    PANEL_FIFO=/tmp/panel-fifo
+>    PANEL_HEIGHT=25
+>    PATH=/home/delucca/.zinit/polaris/bin:/home/delucca/bin:/home/delucca/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin/core_perl:/usr/bin:/home/delucca/.config/bspwm/panel:/home/delucca/.bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/var/lib/snapd/snap/bin:/home/delucca/.fzf/bin
+>    PLUGINS=/home/delucca/.zinit/plugins
+>    PMSPEC=0uUpiPsf
+>    PMY_TRIGGER_KEY=^I
+>    PWD=/home/delucca/Code/delucca/gromacs-mo833a/experiments/ativ-4-exp-1
+>    QT_QPA_PLATFORMTHEME=qt5ct
+>    SHELL=/usr/bin/zsh
+>    SHLVL=4
+>    SPACESHIP_KUBECTL_SHOW=true
+>    SSH_AGENT_PID=7706
+>    SSH_AUTH_SOCK=/tmp/ssh-XXXXXXlM67lr/agent.7705
+>    STARSHIP_SESSION_KEY=3247629607160952
+>    STARSHIP_SHELL=zsh
+>    SXHKD_SHELL=/bin/dash
+>    TERM=screen-256color
+>    TERMINAL=/usr/bin/sterminal
+>    TERM_PROGRAM=tmux
+>    TERM_PROGRAM_VERSION=3.2
+>    TMUX=/tmp/tmux-1000/default,7819,0
+>    tmux_conf_copy_to_os_clipboard=true
+>    tmux_conf_theme_24b_colour=true
+>    TMUXINATOR_CONFIG=/home/delucca/.dotfiles/tmuxinator
+>    TMUX_PANE=%0
+>    USER=delucca
+>    VISUAL=/usr/bin/micro
+>    VTE_VERSION=5602
+>    WINDOWID=37748739
+>    XAUTHORITY=/home/delucca/.Xauthority
+>    XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
+>    XDG_CONFIG_HOME=/home/delucca/.config
+>    XDG_CURRENT_DESKTOP=Bspwm
+>    XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+>    XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/delucca
+>    XDG_RUNTIME_DIR=/run/user/1000
+>    XDG_SEAT=seat0
+>    XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+>    XDG_SESSION_CLASS=user
+>    XDG_SESSION_DESKTOP=bspwm
+>    XDG_SESSION_ID=2
+>    XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+>    XDG_SESSION_TYPE=x11
+>    XDG_VTNR=7
+>    ZPFX=/home/delucca/.zinit/polaris
+>    ZSH_CACHE_DIR=/home/delucca/.cache/zinit
+>    ZSH_DOTENV_PROMPT=false
+> [1mCompile flags:[m 
+>    -DGMX_BUILD_OWN_FFTW=ON
+> [1mGit HEAD revision:[m 6a75b78580326bcf17eca987d0a4e36c94f13389
+> [1mTrial number:[m 
+
+[1m[35mSETUP TRIAL[m
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[1m[36mBuilding GROMACS containers[m
+> Refreshing GROMACS containers...
+>    Refreshing compile stage image
+Sending build context to Docker daemon  90.21MB
+Step 1/5 : FROM alpine:3.13.5 AS compile-stage
+ ---> 6dbb9cc54074
+Step 2/5 : WORKDIR /root
+ ---> Using cache
+ ---> 50408da19519
+Step 3/5 : RUN apk update &&   apk upgrade &&   apk --update add     gcc     g++     build-base     cmake     libstdc++
+ ---> Using cache
+ ---> ed716b73ef44
+Step 4/5 : COPY . .
+ ---> Using cache
+ ---> 7a57ab8dff61
+Step 5/5 : RUN /bin/sh scripts/compile.sh
+ ---> Using cache
+ ---> 672b5656ad71
+Successfully built 672b5656ad71
+Successfully tagged mo833a/gromacs:compile-stage
+>    Refreshing image
+Sending build context to Docker daemon  90.21MB
+Step 1/10 : FROM alpine:3.13.5 AS compile-stage
+ ---> 6dbb9cc54074
+Step 2/10 : WORKDIR /root
+ ---> Using cache
+ ---> 50408da19519
+Step 3/10 : RUN apk update &&   apk upgrade &&   apk --update add     gcc     g++     build-base     cmake     libstdc++
+ ---> Using cache
+ ---> ed716b73ef44
+Step 4/10 : COPY . .
+ ---> Using cache
+ ---> 7a57ab8dff61
+Step 5/10 : RUN /bin/sh scripts/compile.sh
+ ---> Using cache
+ ---> 672b5656ad71
+Step 6/10 : FROM alpine:3.13.5 AS runtime
+ ---> 6dbb9cc54074
+Step 7/10 : WORKDIR /root
+ ---> Using cache
+ ---> 50408da19519
+Step 8/10 : RUN apk add --no-cache g++
+ ---> Using cache
+ ---> c6c017d79e33
+Step 9/10 : COPY --from=compile-stage /usr/local/gromacs /usr/local/gromacs
+ ---> Using cache
+ ---> 958db2b80bc2
+Step 10/10 : ENV PATH "/usr/local/gromacs/bin:${PATH}"
+ ---> Using cache
+ ---> dbafa5982458
+Successfully built dbafa5982458
+Successfully tagged mo833a/gromacs:runtime
+[1m[36mBuilding trial container[m
+Sending build context to Docker daemon   12.7MB
+Step 1/4 : FROM mo833a/gromacs:runtime
+ ---> dbafa5982458
+Step 2/4 : WORKDIR /root/experiment
+ ---> Using cache
+ ---> 1293223d41fa
+Step 3/4 : RUN apk add perf
+ ---> Using cache
+ ---> 17d82baa2cbc
+Step 4/4 : COPY input .
+ ---> Using cache
+ ---> 799815aa8fe4
+Successfully built 799815aa8fe4
+Successfully tagged mo833a/gromacs:ativ-4-exp-1
+
+[1m[35mNEXT STEPS[m
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[1mFinished experiment setup[m
+To execute the Code Profiling, you can follow these steps:
+
+[1mStep 1:[m Open the container with the following command:
+  [1m[36mdocker run \
+    --privileged \
+    -v /:/host \
+    -it \
+    mo833a/gromacs:ativ-4-exp-1 \
+    bin/sh[m
+
+[1mStep 2:[m Run the perf command:
+  [1m[36mperf record gmx mdrun -v -deffnm em[m
+
+[1mStep 3:[m Evaluate the perf result:
+  [1m[36mperf report[m
