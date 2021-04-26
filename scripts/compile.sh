@@ -3,40 +3,50 @@
 # Global variables
 # -------------------------------------------------------------------------------------------------
 
-SCRIPTS_PATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
-SOURCE_DIR=$(dirname ${SCRIPTS_PATH})
 COMPILE_FLAGS="${@:--DGMX_BUILD_OWN_FFTW=ON}"
-BUILD_DIR="${SOURCE_DIR}/build"
+SCRIPTS_DIR_PATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
+SOURCE_DIR_PATH=$(dirname ${SCRIPTS_DIR_PATH})
+BUILD_DIR_PATH="${SOURCE_DIR_PATH}/build"
 
 # Entrypoint
 # -------------------------------------------------------------------------------------------------
 
 function main {
-  echo "Building GROMACS"
-
+  log_welcome
   compile_gromacs
+
+  exit 0
 }
 
+# Log welcome
+# -------------------------------------------------------------------------------------------------
 
-# Fetch GROMACS
+function log_welcome {
+  echo "> Compiling GROMACS..."
+}
+
+# Compile GROMACS
 # -------------------------------------------------------------------------------------------------
 
 function compile_gromacs {
-  echo "Compiling from: ${SOURCE_DIR}"
+  echo ">     Compiling from: ${SOURCE_DIR}"
 
   ensure_required_dirs
   build_gromacs
 }
 
 function ensure_required_dirs {
-  mkdir -p $BUILD_DIR
+  mkdir -p $BUILD_DIR_PATH
 }
 
 function build_gromacs {
-  cd $BUILD_DIR
-  cmake .. $COMPILE_FLAGS
+  pushd $BUILD_DIR_PATH &> /dev/null
+
+  cmake $SOURCE_DIR_PATH $COMPILE_FLAGS
   make -j6
   make install
+
+  popd &> /dev/null
 }
 
 # Execute
