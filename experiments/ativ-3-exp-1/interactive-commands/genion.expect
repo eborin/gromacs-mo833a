@@ -1,0 +1,10 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+spawn $::env(GMX_BIN) genion -s ions.tpr -o 6LVN_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+
+expect "Select a continuous group of solvent molecules*"
+send -- "13\r"
+
+expect eof
